@@ -15,7 +15,7 @@ async function messageHandler(msg) {
       keywords = tokens.slice(1, tokens.length).join(" ")
     }
 
-    let url = `https://g.tenor.com/v1/search?q=${keywords}&key=${process.env.TENORKEY}&limit=100`
+    let url = `https://g.tenor.com/v1/search?q=${keywords}&key=${process.env.TENORKEY}`
     let response = await fetch(url);
     let json = await response.json()
     console.log(json)
